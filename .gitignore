@@ -1,3 +1,9 @@
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+/public/storage
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
