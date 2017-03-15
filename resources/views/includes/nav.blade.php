@@ -8,8 +8,12 @@
 		<li><a href="{{ url('teams') }}">Teams</a></li>
 	</ul>
 
-	<ul class="dropdown-content {{ $g_color }} darken-3">
-		
+	<ul class="dropdown-content {{ $g_color }} darken-3" id="dropdown-create">
+		<li><a href="{{ url('country/add') }}">Country</a></li>
+		<li><a href="{{ url('player/add') }}">Player</a></li>
+		<li><a href="{{ url('team/add') }}">Team</a></li>
+		<li><a href="{{ url('tournament/add') }}">Tournament</a></li>
+		<li><a href="{{ url('position/add') }}">Position</a></li>
 	</ul>
 
 	<nav class="{{ $g_color }} darken-3" style="opacity: 0.7">
@@ -21,6 +25,8 @@
 				<li><a href="{{ url('players') }}">Players</a></li>
 				<li><a href="{{ url('teams') }}">Teams</a></li>
 				@if(!Auth::guest())
+				<li><a href="{{ url('schedule') }}">Schedule</a></li>
+				<li><a href="#!" class="dropdown-button" data-activates="dropdown-create">Create<i class="material-icons right">arrow_drop_down</i></a></li>
 				<li><a href="{{ url('logout') }}">Logout</a></li>
 				@endif
 			</ul>

@@ -24,7 +24,7 @@ class PageController extends Controller{
     		$type = Auth::user()->type;
     		if($type == '0')
     			return view('admin.index');
-    		else return redirect('register');
+    		else return view('errors.503');
     	}
 	}
 
@@ -45,7 +45,37 @@ class PageController extends Controller{
 			$posSub[$pm][] = $ps;
 		}
 		$posMain = array_unique($posMain);
-		return view('pages.players_select', compact('countryList', 'posMain', 'posSub'));
+		return view('pages.view_players', compact('countryList', 'posMain', 'posSub'));
+	}
+
+	/**
+	 * return list of captains
+	 *
+	 * @return json
+	 **/
+	public function captainsList() {
+		// $captains = Player::all();
+		// foreach($captains as $captain) {
+		// 	$arr[] = array($captain['id'], $captain['name']);
+		// }
+		// $arr[] = array('id'=>0, 'name'=>'Sergio Ramos');
+		// $arr[] = array('id'=>1, 'name'=>'Carlos Puyol');
+		$arr = array('Sergio Ramos', 'Carlos Puyol');
+		return response()->json($arr);
+	}
+
+	/**
+	 * return list of clubs
+	 *
+	 * @return json
+	 **/
+	public function clubsList() {
+		$teams = Team::all();
+		$arr = array();
+		foreach($teams as $team) {
+			$arr[] = $team['fullname'];
+		}
+		return response()->json($arr);
 	}
 
 	/**

@@ -19,8 +19,6 @@ class CreatePlayersTable extends Migration
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->string('clubs');
             $table->string('rating');
-            $table->string('position_main');
-            $table->string('position_sub');
             $table->unsignedinteger('goals');
             $table->unsignedinteger('redcards');
             $table->unsignedinteger('yellowcards');

@@ -4,10 +4,10 @@
 	<div class="container" >
 		<section>
 			<div class="row">
-		        <div class="col s12 m8 offset-m2">
+		        <div class="col s12 m6 offset-m3">
 		        	<div class="card z-depth-5" style="opacity: 0.7">
 			            <div class="card-content white-text center red accent-3">
-			            	<h1>Welcome</h1>
+			            	<h2>Welcome</h2>
 			            	<h4>Fifa Creations</h4>
 			            </div>
 			            <form action="{{ url('login') }}" method="POST">

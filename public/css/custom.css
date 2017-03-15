@@ -1,10 +1,17 @@
 body{
   font-family: 'Exo', cursive !important;
 }
-.backcover {
-	background-image: url('../images/crmessi2.jpg') !important;
+.backcover1 {
+	background-image: url('../images/crmessi2.jpg');
 	background-size: cover;
-	/*background-position: center;*/
+}
+
+.backcover2 {
+	background: url('../images/dx.jpg') no-repeat center center fixed !important;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 
 .likelabel {
@@ -88,4 +95,19 @@ input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]){
 	border-bottom: 1px solid red !important;
 	box-shadow: 0 1px 0 0 red !important;
+}
+
+.chips.focus {
+	border-bottom: 1px solid red !important;
+	box-shadow: 0 1px 0 0 red !important;	
+}
+
+.chip {
+	background-color: #ff0000 !important;
+	color: #fff !important;
+	font-weight: bold;
+}
+
+.chip.selected {
+	background-color: #6d11ff !important;
 }

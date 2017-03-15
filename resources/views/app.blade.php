@@ -3,7 +3,11 @@
 	<head>
 		@include('includes.header')	
 	</head>
-	<body class="backcover">
+	@if(Auth::guest())
+	<body class="backcover1 scrollbar" id="style-13">
+	@else
+	<body class="backcover2 scrollbar" id="style-8">
+	@endif
 		<div class="spinner-wrapper">
 		    <div class="spinner2"></div>
 		</div>
